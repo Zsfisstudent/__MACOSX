@@ -55,6 +55,6 @@ def get_veg_info():
 
     return 1
 ##get_veg_info()##测试用
-####11111
+
 
 
