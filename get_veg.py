@@ -76,7 +76,7 @@ def get_veg_info():
         veg_info = res + veg_place + veg_price + dat
 
         input_veg_info(veg_info)
-        return 1
+    return 1
 
 
 
