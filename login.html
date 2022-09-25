@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户登录</title>
+<script type="text/javascript">
+function CheckLogin(fm){
+	if(fm.UserName.value==""){
+		alert("用户名不能为空！");
+		fm.UserName.focus();
+		return false;
+	}
+	
+	if(fm.PassWord.value==""){
+		alert("密码不能为空！");
+		fm.PassWord.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(background.png) no-repeat;
+            background-size: cover;
+        }
+        op{
+            opacity:0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div style="width:100%; height:100%; position:relative; z-index:2147483647; background-color:#FFFFFF;">
+
+
+<div style="width:100%; height:100%; position:relative; z-index:2147483647;">
+<table width="100%"  bgcolor="#ffefa8" style="border-bottom:1px solid #fbf4dd;">
+    <td height="30" align="left">欢迎来到农产品查询网&emsp;&emsp;<a href="signup.html">【点此注册】</a>&emsp;&emsp;<a href="mainhtml.html">【返回首页】</a></td>
+        <td height="30" align="right">农产品大数据查询平台</td>
+
+<table width="1280" bordercolor="green" border="3" align="center" cellpadding="0" cellspacing="0"  >
+  <tr>
+    <td height="300" valign="top" class="borderTop p_5"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="m_t_50">
+      <tr>
+        <td width="360" height="50" align="right"><form method="post" name="Login" id="Login" action="/Login/" onsubmit="return CheckLogin(this);">
+          <table width="300" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="15%" height="50" align="right">账号：</td>
+              <td width="42%" height="50" align="left"><input type="text" id="UserName" name="UserName" size="25" maxlength="15" class="px" tabindex="1" /></td>
+            </tr>
+            <tr>
+              <td height="50" align="right">密码：</td>
+              <td height="50" align="left"><input type="password" id="PassWord" name="PassWord" size="25" maxlength="15" class="px" tabindex="2" /></td>
+            </tr>
+            <tr>
+              <td height="50" align="right">&nbsp;</td>
+              <td height="50" align="left"><input type="hidden" name="Action" id="Action" value="Login" />
+                <input type="hidden" name="Url" id="Url" value="" />
+                <input type="submit" name="Submit" value="登录" class="button" tabindex="3" />&nbsp;&nbsp;<a href="/GetPass/">忘记密码？</a></td>
+            </tr>
+            <tr>
+              <td height="30" align="right">&nbsp;</td>
+              <td height="30" align="left">还不是会员？立即&nbsp;<a href="/Reg/" class="red">免费注册</a></td>
+            </tr>
+          </table>
+        </form></td>
+        <td width="600" height="50" align="right"><table width="560" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="50" colspan="2" align="left" class="B" style="font-size:24px;">&nbsp;登录《VIP蔬菜网》，您可以享受以下服务：</td>
+            </tr>
+          <tr><td height="40" align="left" class="L" style="font-size:18px;"><strong>▪ 如果您是供货商</strong></td></tr>
+            <tr><td height="40" align="left" class="L" style="font-size:18px;"><strong>▪ 如果您是供货商</strong></td></tr>
+            <tr><td height="40" align="left" class="L" style="font-size:18px;"><strong>▪ 如果您是供货商</strong></td></tr>
+            <tr><td height="40" align="left" class="L" style="font-size:18px;"><strong>▪ 如果您是供货商</strong></td></tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
