@@ -6,20 +6,19 @@ def opop1():
     :return:
     """
     try:
-        db = pymysql.connect(host="localhost", user="root", password="root174251", database="mybatis",charset="utf8")
+        db = pymysql.connect(host="localhost", user="root", password="20011019", database="mybatis",charset="utf8")
         #host 链接本机  user账户 password密码 database索要打开的库 charestUTF8
         print("数据库链接成功！")
         cursor = db.cursor()
         #使用cursor()方法创建一个游标
-        cursor.execute("DROP TABLE IF EXISTS booksss")
+        cursor.execute("DROP TABLE IF EXISTS veg")
         #使用execute()方法执行SQL,如果表存在则删除
         sql = """
-        CREATE TABLE booksss(
-            编号 int(8) NOT NULL,
-            书名 varchar (50) NOT NULL,
-            作者 varchar (50) NOT NULL,
-            价格 decimal(10,2) DEFAULT NULL, 
-            出版日期 date DEFAULT NULL
+        CREATE TABLE veg(
+            菜名 varchar(30) NOT NULL,
+            市场 varchar (100) NOT NULL,
+            价格 varchar(8) DEFAULT NULL, 
+            日期 date DEFAULT NULL
         ) 
         """
         #使用预处理语句创建表
@@ -148,4 +147,4 @@ def opop5():
 
 
 if __name__ == '__main__':
-    opop4()
+    opop1()
