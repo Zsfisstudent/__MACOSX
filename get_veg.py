@@ -73,21 +73,13 @@ def get_veg_info():
         dat = dt.split("</td>")
         dat.remove('')
 
-
 ##veg_info按照菜名（0-24），地址（25-49），价格（50-74），日期排列（75-99），访问方式为veg_info[i]
         veg_info = res + veg_place + veg_price + dat
         print(veg_info)
         input_veg_info(veg_info)
     return 1
 
-
-
-
-
-
-
 '''
-
         ##存入TXT（用存入数据库语句替换，每个循环的veg_info含有100个数据）
         filename = "output.txt"
         with open(filename, "a") as object:
@@ -97,9 +89,4 @@ def get_veg_info():
         ###
 '''
 ##get_veg_info()##测试用
-
-#####11
-
 get_veg_info()
-
-###
