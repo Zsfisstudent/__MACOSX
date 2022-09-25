@@ -1,7 +1,7 @@
 import requests
 import pymysql
 import re
-
+#
 def  input_veg_info(veg):
     """
     向表里插入信息
