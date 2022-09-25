@@ -54,6 +54,6 @@ def get_veg_info():
         print(i)
 
     return 1
-
+##get_veg_info()##测试用
 
 
