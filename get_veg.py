@@ -16,6 +16,8 @@ def  input_veg_info(veg):
         #使用cursor()方法创建一个游标
         for i in range(25):
             data.append( [veg[i], veg[i+25], veg[i+50] ,veg[i+75]])
+
+        print(data)
         try:
                 cursor.executemany("insert into veg(菜名,市场,价格,日期)values (%s,%s,%s,%s)",data)
                 #执行sql语句,插入多条数据
@@ -40,7 +42,7 @@ def get_veg_info():
         r.encoding = "utf-8"
 
         ##菜名
-        get = re.compile(r'行情" target="_blank">\w+</a></td>')
+        get = re.compile(r'行情" target="_blank">.+</a></td>')
         cn = re.compile(r'[\u4e00-\u9fa5]+')
         html = get.findall(r.text)
         cst = ''.join(html)
@@ -74,7 +76,7 @@ def get_veg_info():
 
 ##veg_info按照菜名（0-24），地址（25-49），价格（50-74），日期排列（75-99），访问方式为veg_info[i]
         veg_info = res + veg_place + veg_price + dat
-
+        print(veg_info)
         input_veg_info(veg_info)
     return 1
 
