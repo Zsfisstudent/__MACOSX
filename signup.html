@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<title>用户注册</title>
+<script type="text/javascript">
+function CheckRegst(fm){
+	if(fm.UserName.value==""){
+		alert("用户名不能为空！");
+		fm.UserName.focus();
+		return false;
+	}
+	
+	if(fm.PassWord.value==""){
+		alert("密码不能为空！");
+		fm.PassWord.focus();
+		return false;
+	}
+	else{
+		if(fm.PassWord.value!=fm.PassWord2.value){
+			alert("两次密码输入不相同,请重新输入！");
+			fm.PassWord.value="";
+			fm.PassWord2.value="";
+			fm.PassWord.focus();
+			return false;
+		}
+	}
+	return true;
+}
+</script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(background.png) no-repeat;
+            background-size: cover;
+        }
+        op{
+            opacity:0;
+        }
+    </style>
 </head>
+
 <body>
+<table width="100%"  bgcolor="#ffefa8" style="border-bottom:1px solid #fbf4dd;">
+    <td height="30" align="left">欢迎来到农产品查询网&emsp;&emsp;<a href="login.html">【点此登录】</a>&emsp;&emsp;<a href="mainhtml.html">【返回首页】</a></td>
+        <td height="30" align="right">农产品大数据查询平台</td>
+</table>
+
+<table width="1280" border="2" bordercolor="green" align="center" cellpadding="0" cellspacing="0" class="border2 m_t_8">
+  <tr>
+    <td height="30"><font color="green"> 用户注册</font></td>
+  </tr>
+  <tr>
+    <td height="350" valign="top" class="borderTop p_5"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="m_t_50">
+      <tr>
+        <td width="45%" height="50" align="center">><img src="vegpic.jpg" width="336" height="240" /></td>
+        <td width="55%" height="50"><form method="post" name="Reg" id="Reg" action="/Reg/" onsubmit="return CheckRegst(this);">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="15%" height="30" align="left">用户名：</td>
+              <td width="35%" height="30" align="left"><input type="text" id="UserName" name="UserName" size="25" maxlength="15" class="px" /></td>
+              <td width="50%" height="30" align="left"><font color="red"> 由5到15个字符组成，只可以包含字符、数字、下划线，且不能以下划线开头或结尾！</font></td>
+            </tr>
+            <tr>
+              <td width="15%" height="20" align="right">&nbsp;</td>
+              <td height="20" colspan="2" align="left"><font color="red"> </font></td>
+              </tr>
+            <tr>
+              <td height="50" align="left">密码：</td>
+              <td height="50" align="left"><input type="password" id="PassWord" name="PassWord" size="25" maxlength="15" class="px" /></td>
+              <td height="50" align="left"><font color="green">请填写密码</font></td>
+            </tr>
+            <tr>
+              <td width="20%" height="50" align="left">确认密码：</td>
+              <td height="50" align="left"><input type="password" id="PassWord2" name="PassWord2" size="25" maxlength="15" class="px" /></td>
+              <td height="50" align="left"><font color="green">请再次输入密码</font></td>
+            </tr>
+            <tr>
+              <td height="50" align="right">&nbsp;</td>
+              <td height="50" align="left"><input type="hidden" name="Action" id="Action" value="Reg" />
+                <input type="hidden" name="Url" id="Url" value="http://www.vipveg.com/Login/" />
+                <input type="hidden" name="InviteID" id="InviteID" value="-1" />
+                <input type="submit" name="Submit" value="注册" class="button" /></td>
+              <td height="50" align="left">&nbsp;</td>
+            </tr>
+          </table>
+        </form></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
 
 </body>
 </html>
