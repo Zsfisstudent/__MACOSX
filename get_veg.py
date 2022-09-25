@@ -45,13 +45,15 @@ def get_veg_info():
         if str(dat[24]) != "2022-09-24" :
             break
 
-
+##veg_info按照菜名，地址，价格，日期排列
         veg_info = res + veg_place + veg_price + dat
+        ##存入TXT（用存入数据库语句替换
         filename = "output.txt"
         with open(filename, "a") as object:
             object.write(str(veg_info)+"\n")
             object.close()
         print(i)
+        ###
 
     return 1
 ##get_veg_info()##测试用
